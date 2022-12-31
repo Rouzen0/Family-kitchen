@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">Family_kitchen</string>
+    <string name="app_name">Family Kitchen</string>
+
+    <string name="family_kitchen">Family Kitchen</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Signup</string>
+    <string name="sign_in_as_family"><u>sign in as Family</u></string>
+    <string name="sign_in_as_delivery"><u>sign in as Delivery</u></string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="first_name">First name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="create_account">Create account</string>
+    <string name="enter_your_maroof_number">Maroof number</string>
+
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="message">Message</string>
+    <string name="more">More</string>
+    <string name="rate">Rate</string>
+
+    <string name="email_address">Email address</string>
+    <string name="location">Location</string>
+    <string name="sign_out">Sign out</string>
+
 </resources>
