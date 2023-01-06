@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.Cutomer.HomeActivity">
+    tools:context=".ui.activities.Delivery.DeliveryHomeActivity">
+
 
     <fragment
         android:visibility="visible"
-        android:id="@+id/nav_host_fragment"
+        android:id="@+id/nav_host_delivery_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -17,7 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph_customer" />
+        app:navGraph="@navigation/nav_graph_delivery" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -30,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu_customer" />
+        app:menu="@menu/bottom_nav_menu_delivery" />
 
 
     <FrameLayout

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_family"
+    app:startDestination="@id/familyMyShopFragment">
+
+    <fragment
+        android:id="@+id/familyMyShopFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMyShopFragment"
+        android:label="fragment_family_my_shop"
+        tools:layout="@layout/fragment_family_my_shop" />
+    <fragment
+        android:id="@+id/familyOrdersFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyOrdersFragment"
+        android:label="fragment_family_orders"
+        tools:layout="@layout/fragment_family_orders" />
+    <fragment
+        android:id="@+id/familyMessageFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMoreFragment"
+        android:label="fragment_family_more"
+        tools:layout="@layout/fragment_family_more" />
+    <fragment
+        android:id="@+id/familyMoreFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMessageFragment"
+        android:label="fragment_family_message"
+        tools:layout="@layout/fragment_family_message" />
+</navigation>

@@ -1,4 +1,4 @@
-package com.example.family_kitchen.ui.fragments.Customer;
+package com.example.family_kitchen.ui.fragments.Family;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.family_kitchen.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link OrderFragment#newInstance} factory method to
+ * Use the {@link FamilyMessageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OrderFragment extends Fragment {
+public class FamilyMessageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class OrderFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public OrderFragment() {
+    public FamilyMessageFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class OrderFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OrderFragment.
+     * @return A new instance of fragment FamilyMessageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OrderFragment newInstance(String param1, String param2) {
-        OrderFragment fragment = new OrderFragment();
+    public static FamilyMessageFragment newInstance(String param1, String param2) {
+        FamilyMessageFragment fragment = new FamilyMessageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class OrderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order, container, false);
+        return inflater.inflate(R.layout.fragment_family_message, container, false);
     }
 }

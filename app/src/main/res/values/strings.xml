@@ -6,25 +6,52 @@
     <string name="sign_up">Signup</string>
     <string name="sign_in_as_family"><u>sign in as Family</u></string>
     <string name="sign_in_as_delivery"><u>sign in as Delivery</u></string>
-
     <string name="email">Email</string>
     <string name="password">Password</string>
-
     <string name="first_name">First name</string>
     <string name="phone_number">Phone number</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="create_account">Create account</string>
     <string name="enter_your_maroof_number">Maroof number</string>
-
     <string name="search">Search</string>
     <string name="home">Home</string>
     <string name="orders">Orders</string>
     <string name="message">Message</string>
     <string name="more">More</string>
     <string name="rate">Rate</string>
-
     <string name="email_address">Email address</string>
     <string name="location">Location</string>
     <string name="sign_out">Sign out</string>
+    <string name="my_shop">My Shop</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="order_id">Order ID</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="delivery_state">Delivery State</string>
+    <string name="paid_by">Paid By</string>
+    <string name="item">Item</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="add_category">Add category</string>
+    <string name="remove">Remove</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_price">Item Price</string>
+    <string name="add_picture">Add Picture</string>
+    <string name="price">Price</string>
+    <string name="add_item">Add Item</string>
+    <string name="cancel">Cancel</string>
+    <string name="customer_messages">Customers Messages</string>
+    <string name="back_to_business">Back to business</string>
+    <string name="stop_accept_order">Stop accept orders</string>
+    <string name="customer_orders">Customer Orders</string>
+    <string name="order_details">Order Details</string>
+    <string name="done">DONE!</string>
+    <string name="family_location"><u>Family Location</u></string>
+    <string name="customer_location"><u>Customer Location</u></string>
+    <string name="chat_with_client">Chat with Client</string>
+    <string name="store_name">Store name</string>
+    <string name="delivery_representor">Delivery representor</string>
+    <string name="rate_store_delivery">Rate:</string>
+    <string name="submit">Submit</string>
 
 </resources>

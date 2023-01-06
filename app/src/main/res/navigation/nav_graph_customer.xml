@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Customer.HomeFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Customer.CustomerHomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_customer_home" />
     <fragment
         android:id="@+id/orderFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Customer.OrderFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Customer.CustomerOrderFragment"
         android:label="fragment_order"
-        tools:layout="@layout/fragment_order" />
+        tools:layout="@layout/fragment_customer_order" />
     <fragment
         android:id="@+id/moreFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Customer.MoreFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Customer.CustomerMoreFragment"
         android:label="fragment_more"
-        tools:layout="@layout/fragment_more" />
+        tools:layout="@layout/fragment_customer_more" />
     <fragment
         android:id="@+id/messageFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Customer.MessageFragment"
+        android:name="com.example.family_kitchen.ui.fragments.Customer.CustomerMessageFragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_customer_message" />
 </navigation>

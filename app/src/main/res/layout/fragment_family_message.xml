@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.Customer.MessageFragment">
+    tools:context=".ui.fragments.Family.FamilyMessageFragment">
 
     <TextView
 
@@ -14,7 +14,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/message"
+        android:text="@string/customer_messages"
         android:textColor="@color/red"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"

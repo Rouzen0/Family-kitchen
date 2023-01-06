@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/familyMyShopFragment"
+        android:title="@string/my_shop"
+        android:icon="@drawable/ic_shop"/>
+
+    <item android:id="@+id/familyOrdersFragment"
+        android:title="@string/orders"
+        android:icon="@drawable/ic_cart"/>
+
+    <item android:id="@+id/familyMoreFragment"
+        android:title="@string/message"
+        android:icon="@drawable/ic_message"/>
+
+    <item android:id="@+id/familyMessageFragment"
+        android:title="@string/more"
+        android:icon="@drawable/ic_more"/>
+
+</menu>
