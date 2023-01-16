@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/familyMyShopFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMyShopFragment"
+        android:name="com.example.family_kitchen.ui.family.fragments.FamilyMyShopFragment"
         android:label="fragment_family_my_shop"
         tools:layout="@layout/fragment_family_my_shop" />
     <fragment
         android:id="@+id/familyOrdersFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyOrdersFragment"
+        android:name="com.example.family_kitchen.ui.family.fragments.FamilyOrdersFragment"
         android:label="fragment_family_orders"
         tools:layout="@layout/fragment_family_orders" />
     <fragment
         android:id="@+id/familyMessageFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMoreFragment"
+        android:name="com.example.family_kitchen.ui.family.fragments.FamilyMoreFragment"
         android:label="fragment_family_more"
         tools:layout="@layout/fragment_family_more" />
     <fragment
         android:id="@+id/familyMoreFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Family.FamilyMessageFragment"
+        android:name="com.example.family_kitchen.ui.family.fragments.FamilyMessageFragment"
         android:label="fragment_family_message"
         tools:layout="@layout/fragment_family_message" />
 </navigation>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.Family.FamilyOrderDetailFragment">
+    tools:context=".ui.family.fragments.FamilyOrderDetailFragment">
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="24dp"

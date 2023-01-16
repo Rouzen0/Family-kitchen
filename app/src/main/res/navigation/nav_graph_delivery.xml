@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/deliveryOrderFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Delivery.DeliveryOrderFragment"
+        android:name="com.example.family_kitchen.ui.delivery.fragments.DeliveryOrderFragment"
         android:label="fragment_delivery_order"
         tools:layout="@layout/fragment_delivery_order" />
     <fragment
         android:id="@+id/deliveryMessageFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Delivery.DeliveryMessageFragment"
+        android:name="com.example.family_kitchen.ui.delivery.fragments.DeliveryMessageFragment"
         android:label="fragment_delivery_message"
         tools:layout="@layout/fragment_delivery_message" />
     <fragment
         android:id="@+id/deliveryMoreFragment"
-        android:name="com.example.family_kitchen.ui.fragments.Delivery.DeliveryMoreFragment"
+        android:name="com.example.family_kitchen.ui.delivery.fragments.DeliveryMoreFragment"
         android:label="fragment_delivery_more"
         tools:layout="@layout/fragment_delivery_more" />
 </navigation>
