@@ -8,26 +8,39 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.family_kitchen.R;
+import com.example.family_kitchen.model.Cart;
 import com.example.family_kitchen.model.Item;
+import com.example.family_kitchen.model.Rating;
+import com.example.family_kitchen.model.User;
+import com.example.family_kitchen.ui.customer.activities.CustomerCartActivity;
+import com.example.family_kitchen.ui.customer.activities.CustomerStoreViewActivity;
 import com.example.family_kitchen.ui.family.activities.FamilyUpdateItemActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdapter.ViewHolder> {
 
-    ArrayList<Item> list;
+    ArrayList<User> list;
     private Context context;
-    Item item;
-    private DatabaseReference db;
+    User item;
+    float family_rating,count;
+    private DatabaseReference db_rating;
 
-    public CustomerItemsAdapter(Context ctx, ArrayList <Item> list) {
+    public CustomerItemsAdapter(Context ctx, ArrayList <User> list) {
         this.list = list;
         context=ctx;
     }
@@ -45,10 +58,10 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         item =list.get(position);
 
-        holder.tv_item_name.setText(item.getStoreName());
-        holder.tv_item_price.setText(item.getItemName());
-        if(!item.getItemImageUrl().equals("")) {
-            Picasso.get().load(item.getItemImageUrl()).placeholder(R.drawable.image_place_holder_large).into(holder.iv_item);
+        holder.tv_item_name.setText(item.getName());
+        holder.tv_item_price.setText(item.getCategory());
+        if(!item.getImage().equals("")) {
+            Picasso.get().load(item.getImage()).placeholder(R.drawable.image_place_holder_large).into(holder.iv_item);
         } else{
             holder.iv_item.setImageDrawable(context.getResources().getDrawable(R.drawable.image_place_holder_large));
         }
@@ -57,17 +70,44 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
             @Override
             public void onClick(View v) {
                 item =list.get(position);
-                Intent intent=new Intent(context, FamilyUpdateItemActivity.class);
-                intent.putExtra("item_id",item.getItemId());
-                intent.putExtra("item_name",item.getItemName());
-                intent.putExtra("item_price",item.getItemPrice());
-                intent.putExtra("item_url",item.getItemImageUrl());
+                Intent intent=new Intent(context, CustomerStoreViewActivity.class);
                 intent.putExtra("user_id",item.getUserId());
                 context.startActivity(intent);
             }
         });
-    }
+        db_rating = FirebaseDatabase.getInstance().getReference("Rating");
 
+        db_rating.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //getting all nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    item =list.get(position);
+                    Rating rating = postSnapshot.getValue(Rating.class);
+                    String s=rating.getFamilyId();
+                    if(s.equals(item.getUserId())) {
+
+                        family_rating += Float.parseFloat(rating.getStoreRating());
+                        count++;
+
+                        float rate = family_rating / count;
+                        if(rate==5.0){
+                            holder.tv_item_rating.setText("5.0");
+                        }
+                        else {
+                            holder.tv_item_rating.setText(new DecimalFormat("#.#").format(rate));
+                        }
+                    }
+
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+
+    }
     @Override
     public int getItemCount() {
         return list.size();
@@ -77,12 +117,14 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
 
         public TextView tv_item_name;
         public TextView tv_item_price;
+        public TextView tv_item_rating;
         public ImageView iv_item;
 
         public ViewHolder(@NonNull View v) {
             super(v);
 
             tv_item_name = (TextView) v.findViewById(R.id.textView_item_name);
+            tv_item_rating = (TextView) v.findViewById(R.id.textView_rating);
             tv_item_price = (TextView) v.findViewById(R.id.textView_item_price);
             iv_item = (ImageView) v.findViewById(R.id.imageView_item);
         }

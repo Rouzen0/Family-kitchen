@@ -26,11 +26,11 @@
     <string name="my_shop">My Shop</string>
     <string name="accept">Accept</string>
     <string name="reject">Reject</string>
-    <string name="order_id">Order ID</string>
-    <string name="total_cost">Total Cost</string>
+    <string name="order_id">Order ID:</string>
+    <string name="total_cost">Total Cost:</string>
     <string name="order_detail">Order Detail</string>
-    <string name="delivery_state">Delivery State</string>
-    <string name="paid_by">Paid By</string>
+    <string name="delivery_state">Delivery State:</string>
+    <string name="paid_by">Paid By:</string>
     <string name="item">Item</string>
     <string name="add_new_item">Add new item</string>
     <string name="add_category">Add category</string>
@@ -40,6 +40,7 @@
     <string name="add_picture">Add Picture</string>
     <string name="price">Price</string>
     <string name="add_item">Add Item</string>
+    <string name="save_store_info">Save</string>
     <string name="cancel">Cancel</string>
     <string name="customer_messages">Customers Messages</string>
     <string name="back_to_business">Back to business</string>
@@ -47,14 +48,31 @@
     <string name="customer_orders">Customer Orders</string>
     <string name="order_details">Order Details</string>
     <string name="done">DONE!</string>
-    <string name="family_location"><u>Family Location</u></string>
+    <string name="family_customer_location"><u>Location</u></string>
     <string name="customer_location"><u>Customer Location</u></string>
     <string name="chat_with_client">Chat with Client</string>
     <string name="store_name">Store name</string>
     <string name="delivery_representor">Delivery representor</string>
-    <string name="rate_store_delivery">Rate:</string>
+    <string name="rate_store_delivery">Rate</string>
     <string name="submit">Submit</string>
     <string name="no_item_found">No Item Found</string>
     <string name="update_item">Update Item</string>
+    <string name="deliver">Deliver</string>
+    <string name="complete">Complete Order</string>
+    <string name="store">Store Info</string>
+    <string name="family_store">Family Store</string>
+    <string name="view_cart">View Cart</string>
+    <string name="cart">Cart</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDE7e_Plm0pREBGXVetNrg7jATzTf1cmWU</string>
+
+    <string-array name="array_category">
+        <item>Select Category</item>
+        <item>Fast food</item>
+        <item>Drinks</item>
+        <item>Burgers</item>
+        <item>Desserts</item>
+        <item>Sandwitches</item>
+        <item>Sea food</item>
+    </string-array>
 
 </resources>

@@ -16,11 +16,6 @@
         android:label="fragment_family_orders"
         tools:layout="@layout/fragment_family_orders" />
     <fragment
-        android:id="@+id/familyMessageFragment"
-        android:name="com.example.family_kitchen.ui.family.fragments.FamilyMoreFragment"
-        android:label="fragment_family_more"
-        tools:layout="@layout/fragment_family_more" />
-    <fragment
         android:id="@+id/familyMoreFragment"
         android:name="com.example.family_kitchen.ui.family.fragments.FamilyMessageFragment"
         android:label="fragment_family_message"

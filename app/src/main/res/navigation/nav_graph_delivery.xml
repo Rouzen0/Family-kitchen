@@ -15,9 +15,4 @@
         android:name="com.example.family_kitchen.ui.delivery.fragments.DeliveryMessageFragment"
         android:label="fragment_delivery_message"
         tools:layout="@layout/fragment_delivery_message" />
-    <fragment
-        android:id="@+id/deliveryMoreFragment"
-        android:name="com.example.family_kitchen.ui.delivery.fragments.DeliveryMoreFragment"
-        android:label="fragment_delivery_more"
-        tools:layout="@layout/fragment_delivery_more" />
 </navigation>

@@ -57,8 +57,6 @@ public class FamilyItemsAdapter extends RecyclerView.Adapter<FamilyItemsAdapter.
             holder.iv_item.setImageDrawable(context.getResources().getDrawable(R.drawable.image_place_holder));
         }
 
-    //    Picasso.get().load(item.getItemImageUrl()).placeholder(R.drawable.app_logo).into(holder.iv_item);
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

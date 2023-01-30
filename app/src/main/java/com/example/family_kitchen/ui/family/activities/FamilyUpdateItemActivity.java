@@ -72,8 +72,8 @@ public class FamilyUpdateItemActivity extends AppCompatActivity implements View.
 
 
             int a = 0;
-            itemName = binding.editTextItemName.getText().toString().trim();
-            itemPrice = binding.editTextItemPrice.getText().toString().trim();
+            itemName = binding.editTextItemName.getText().toString();
+            itemPrice = binding.editTextItemPrice.getText().toString();
 
 
             if (binding.editTextItemName.getText().toString().isEmpty()) {

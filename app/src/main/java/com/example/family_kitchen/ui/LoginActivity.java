@@ -3,9 +3,9 @@ package com.example.family_kitchen.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -124,8 +124,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             progressDialog.show();
 
                             FirebaseUser user = mAuth.getCurrentUser();
-//                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-//                            finish();
                             final String UserId = mAuth.getCurrentUser().getUid();
                             DatabaseReference UserNode = FirebaseDatabase.getInstance().getReference("User");
                             UserNode.addValueEventListener(new ValueEventListener() {

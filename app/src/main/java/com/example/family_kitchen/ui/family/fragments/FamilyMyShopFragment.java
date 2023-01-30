@@ -16,6 +16,7 @@ import com.example.family_kitchen.databinding.FragmentCustomerMoreBinding;
 import com.example.family_kitchen.databinding.FragmentFamilyMyShopBinding;
 import com.example.family_kitchen.model.Item;
 import com.example.family_kitchen.ui.family.activities.FamilyAddItemActivity;
+import com.example.family_kitchen.ui.family.activities.StoreInfoActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,7 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class FamilyMyShopFragment extends Fragment implements View.OnClickListener{
+public class FamilyMyShopFragment extends Fragment implements View.OnClickListener {
     private FragmentFamilyMyShopBinding binding;
     FamilyItemsAdapter familyItemsAdapter;
     ArrayList<Item> itemArrayList;
@@ -39,10 +40,9 @@ public class FamilyMyShopFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         binding = FragmentFamilyMyShopBinding.inflate(inflater,container,false);
         binding.buttonAddNewItem.setOnClickListener(this);
-        binding.buttonAddCategory.setOnClickListener(this);
+        binding.buttonStoreInfo.setOnClickListener(this);
         firebaseAuth=FirebaseAuth.getInstance();
         userId=firebaseAuth.getCurrentUser().getUid().toString();
-
         itemArrayList=new ArrayList<>();
         db = FirebaseDatabase.getInstance().getReference("Items");
         fetchItemsData();
@@ -55,6 +55,8 @@ public class FamilyMyShopFragment extends Fragment implements View.OnClickListen
 
         if(id==R.id.button_add_new_item){
             startActivity(new Intent(getActivity(), FamilyAddItemActivity.class));
+        } else if(id==R.id.button_store_info){
+            startActivity(new Intent(getActivity(), StoreInfoActivity.class));
         }
     }
 
@@ -65,7 +67,7 @@ public class FamilyMyShopFragment extends Fragment implements View.OnClickListen
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //clearing the previous User list
                 itemArrayList.clear();
-                //getting all nodes
+                //getting all data
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Item item = postSnapshot.getValue(Item.class);
                     if(itemArrayList!=null && item.getUserId().equals(userId)){

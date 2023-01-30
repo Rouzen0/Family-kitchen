@@ -6,5 +6,7 @@ public class Constants {
     public static String PREF_EMAIL = "user_email";
     public static String PREF_USER_NAME = "user_name";
     public static String PREF_REMEMBER_ME = "user_remember_me";
+    public static String PREF_ORDER_ID = "order_id";
+    public static String PREF_CATEGORY = "store_category";
 
 }

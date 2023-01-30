@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="120dp">
 
 
     <ImageView
@@ -18,56 +18,74 @@
 
     <TextView
         android:id="@+id/textView_store_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Store name"
+        android:text="-"
+        android:layout_marginEnd="10dp"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_price"
         app:layout_constraintStart_toEndOf="@+id/imageView_food"
         app:layout_constraintTop_toTopOf="@+id/imageView_food" />
 
     <TextView
         android:id="@+id/textView_delivery_date"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Delivery at 2 Jan"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/button_rate_order"
+        app:layout_constraintEnd_toStartOf="@+id/button_rate_order"
         app:layout_constraintStart_toEndOf="@+id/imageView_food"
         app:layout_constraintTop_toBottomOf="@+id/textView_store_name" />
 
     <Button
-        android:id="@+id/button"
+        android:visibility="invisible"
+        android:id="@+id/button_rate_order"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_button"
         android:backgroundTint="@color/green"
         android:text="@string/rate"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_delivery_date"
-        app:layout_constraintStart_toEndOf="@+id/textView_store_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_store_name"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_total_price" />
 
     <TextView
-        android:id="@+id/textView3"
+
+        android:id="@+id/textview_order_status"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="In Progress"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/button_rate_order"
+        app:layout_constraintEnd_toEndOf="@+id/button_rate_order"
+        app:layout_constraintStart_toStartOf="@+id/button_rate_order"
+        app:layout_constraintTop_toTopOf="@+id/button_rate_order" />
+
+    <TextView
+        android:id="@+id/textView_total_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
         android:text="50 SR"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_medium"
-        android:layout_margin="4dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider"

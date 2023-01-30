@@ -7,22 +7,33 @@
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/bg_cicle.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/bg_edit_text.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/bg_edit_text_rounded.xml" value="0.1375" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_add.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_arrow_back.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_cart.xml" value="0.1375" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_drop_down.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_home.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_message.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_more.xml" value="0.1375" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/drawable/ic_search.xml" value="0.1375" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_customer_cart.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_customer_home.xml" value="0.21203703703703702" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_customer_more.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_customer_rate_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_customer_store_view.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_delivery_home.xml" value="0.1" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_delivery_more.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_delivery_order_detail.xml" value="0.4921875" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_family_add_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_family_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_family_more.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_family_order_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_family_update_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_intro.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/activity_store_info.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/dialog_rate.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_customer_home.xml" value="0.21203703703703702" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_customer_message.xml" value="0.25416666666666665" />
@@ -33,7 +44,7 @@
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_delivery_order.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_delivery_order_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_add_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_message.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_message.xml" value="0.1" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_more.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_my_shop.xml" value="0.264" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_family_order_detail.xml" value="0.25416666666666665" />
@@ -43,7 +54,9 @@
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_more.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/fragment_order.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_customer_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_customer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_detail_item_family.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_menu_cart.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_my_shop.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_order_customer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Zayod/AndroidStudioProjects/Family_kitchen/app/src/main/res/layout/item_rv_order_delivery.xml" value="0.25416666666666665" />

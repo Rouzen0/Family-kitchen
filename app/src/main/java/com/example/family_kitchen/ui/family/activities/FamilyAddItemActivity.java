@@ -64,8 +64,8 @@ public class FamilyAddItemActivity extends AppCompatActivity implements View.OnC
 
 
             int a=0;
-            itemName=binding.editTextItemName.getText().toString().trim();
-            itemPrice=binding.editTextItemPrice.getText().toString().trim();
+            itemName=binding.editTextItemName.getText().toString();
+            itemPrice=binding.editTextItemPrice.getText().toString();
 
 
             if(binding.editTextItemName.getText().toString().isEmpty()){
@@ -73,7 +73,7 @@ public class FamilyAddItemActivity extends AppCompatActivity implements View.OnC
                 binding.editTextItemName.setError("Please Enter Item Name");
             }
             else{
-                a--;
+
                 binding.editTextItemName.setError(null);
             }
 
@@ -83,7 +83,7 @@ public class FamilyAddItemActivity extends AppCompatActivity implements View.OnC
                 binding.editTextItemPrice.setError("Please Enter Item Price");
             }
             else{
-                a--;
+
                 binding.editTextItemPrice.setError(null);
             }
 
@@ -148,11 +148,4 @@ public class FamilyAddItemActivity extends AppCompatActivity implements View.OnC
         }
     }
 
-        private String getFileExtension(Uri uri)
-        {
-            ContentResolver cR =getContentResolver();
-            MimeTypeMap mime =MimeTypeMap.getSingleton();
-            return mime.getExtensionFromMimeType(cR.getType(uri));
-
-        }
 }

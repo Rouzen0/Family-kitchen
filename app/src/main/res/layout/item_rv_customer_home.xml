@@ -10,62 +10,83 @@
         android:id="@+id/textView_item_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="start"
+        android:layout_marginEnd="10dp"
         android:text="@string/item_name"
+        android:singleLine="true"
+        android:ellipsize="end"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_item"
-        app:layout_constraintStart_toStartOf="@+id/imageView_item"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_item" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <TextView
         android:id="@+id/textView_item_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="start"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginEnd="10dp"
         android:text="@string/item_price"
-        android:layout_marginBottom="8dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_item_name"
         app:layout_constraintStart_toStartOf="@+id/textView_item_name"
         app:layout_constraintTop_toBottomOf="@+id/textView_item_name" />
 
-    <ImageView
-        android:layout_margin="10dp"
-        android:id="@+id/imageView_item"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="140dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_burger" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/image_burger" />
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_rating"
+        app:layout_constraintEnd_toStartOf="@+id/textView_rating"
+        app:layout_constraintTop_toTopOf="@+id/textView_rating"
         app:layout_constraintVertical_bias="1.0"
         android:layout_marginBottom="2dp"
         app:srcCompat="@drawable/ic_star" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5.0"
         android:fontFamily="@font/poppins_medium"
+        android:text="5.0"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView_item_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_item_name" />
+        app:layout_constraintBottom_toTopOf="@+id/textView_item_price"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/textView_item_name"
+        app:layout_constraintVertical_bias="0.42000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

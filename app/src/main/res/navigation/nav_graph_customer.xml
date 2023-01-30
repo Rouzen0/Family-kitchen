@@ -16,11 +16,6 @@
         android:label="fragment_order"
         tools:layout="@layout/fragment_customer_order" />
     <fragment
-        android:id="@+id/moreFragment"
-        android:name="com.example.family_kitchen.ui.customer.fragments.CustomerMoreFragment"
-        android:label="fragment_more"
-        tools:layout="@layout/fragment_customer_more" />
-    <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.family_kitchen.ui.customer.fragments.CustomerMessageFragment"
         android:label="fragment_message"

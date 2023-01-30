@@ -55,6 +55,23 @@ public class SharedPref {
         return pref.getString(Constants.PREF_USER_NAME, "");
     }
 
+    public void setOrderId(String orderId){
+        editor.putString(Constants.PREF_ORDER_ID, orderId);
+        editor.commit();
+    }
+    public String getOrderId(){
+        return pref.getString(Constants.PREF_ORDER_ID, "");
+    }
+
+
+    public void setCategory(String category){
+        editor.putString(Constants.PREF_CATEGORY, category);
+        editor.commit();
+    }
+    public String getCategory(){
+        return pref.getString(Constants.PREF_CATEGORY, "");
+    }
+
 
 
 

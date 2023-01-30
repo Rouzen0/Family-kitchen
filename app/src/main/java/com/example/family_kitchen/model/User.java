@@ -1,10 +1,12 @@
 package com.example.family_kitchen.model;
 
-public class UserRegistration {
+public class User {
 
-    String Name,Email,Password,PhoneNumber,MaroofNumber,UserType,UserId;
+    String Name,Email,Password,PhoneNumber,MaroofNumber,UserType,UserId,Longitude,Latitude,Category,Image;
 
-    public UserRegistration(String name, String email, String password, String phoneNumber, String maroofNumber, String userType, String userId) {
+    public User(){}
+
+    public User(String name, String email, String password, String phoneNumber, String maroofNumber, String userType, String userId, String longitude, String latitude, String category, String image) {
         Name = name;
         Email = email;
         Password = password;
@@ -12,6 +14,8 @@ public class UserRegistration {
         MaroofNumber = maroofNumber;
         UserType = userType;
         UserId = userId;
+        Category = category;
+        Image = image;
     }
 
     public String getName() {
@@ -68,5 +72,21 @@ public class UserRegistration {
 
     public void setUserId(String userId) {
         UserId = userId;
+    }
+
+    public String getCategory() {
+        return Category;
+    }
+
+    public void setCategory(String category) {
+        Category = category;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
     }
 }

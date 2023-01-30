@@ -15,6 +15,7 @@
 
     <item android:id="@+id/moreFragment"
         android:title="@string/more"
+        android:onClick="showCustomerMore"
         android:icon="@drawable/ic_more"/>
 
 </menu>

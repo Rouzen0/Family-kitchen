@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.family_kitchen.R;
-import com.example.family_kitchen.databinding.ActivityIntroBinding;
 import com.example.family_kitchen.databinding.ActivitySignupBinding;
-import com.example.family_kitchen.model.UserRegistration;
+import com.example.family_kitchen.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -24,7 +23,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
-
     private ActivitySignupBinding binding;
     private String name,email,password,phoneNumber,maroofNumber;
     private FirebaseAuth mAuth;
@@ -67,7 +65,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextName.setError("Please Enter Name");
             }
             else{
-                a--;
+
                 binding.editTextName.setError(null);
             }
 
@@ -76,7 +74,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextEmail.setError("Please Enter Email");
             }
             else{
-                a--;
+
                 binding.editTextEmail.setError(null);
             }
 
@@ -85,7 +83,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextPassword.setError("Please Enter Password");
             }
             else{
-                a--;
+
                 binding.editTextPassword.setError(null);
             }
 
@@ -94,7 +92,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextPhoneNumber.setError("Please Enter Phone Number");
             }
             else{
-                a--;
+
                 binding.editTextPhoneNumber.setError(null);
             }
 
@@ -105,7 +103,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     a++;
                     binding.editTextMaroofNumber.setError("Please Enter Maroof Number");
                 } else {
-                    a--;
+
                     binding.editTextMaroofNumber.setError(null);
                 }
             }
@@ -155,9 +153,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
-        String Name,Email,Password,PhoneNumber,MaroofNumber,UserId;
-        UserRegistration userRegistration= new UserRegistration(name,email,password,phoneNumber,maroofNumber,userType,userId);
+        User userRegistration= new User(name,email,password,phoneNumber,maroofNumber,userType,userId,"","","","");
         db.child(userId).setValue(userRegistration);
     }
-
 }

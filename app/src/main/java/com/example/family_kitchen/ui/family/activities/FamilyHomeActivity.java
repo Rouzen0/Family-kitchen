@@ -5,7 +5,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.family_kitchen.R;
 import com.example.family_kitchen.databinding.ActivityFamilyHomeBinding;
@@ -22,5 +24,8 @@ public class FamilyHomeActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_family_fragment);
         NavigationUI.setupWithNavController(binding.bottomNavigation,navController);
 
+    }
+    public void ShowFamilyMore(MenuItem item) {
+        startActivity(new Intent(this,FamilyMoreActivity.class));
     }
 }

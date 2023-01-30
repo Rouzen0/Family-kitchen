@@ -1,17 +1,12 @@
-package com.example.family_kitchen.ui.delivery.fragments;
+package com.example.family_kitchen.ui.family.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.family_kitchen.R;
-import com.example.family_kitchen.databinding.FragmentCustomerMoreBinding;
-import com.example.family_kitchen.databinding.FragmentDeliveryMoreBinding;
+import com.example.family_kitchen.databinding.ActivityFamilyMoreBinding;
 import com.example.family_kitchen.preference.SharedPref;
 import com.example.family_kitchen.ui.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,26 +16,27 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class DeliveryMoreFragment extends Fragment implements View.OnClickListener {
+public class FamilyMoreActivity extends AppCompatActivity implements View.OnClickListener  {
+    private ActivityFamilyMoreBinding binding;
 
-    private FragmentDeliveryMoreBinding binding;
     private SharedPref pref;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference db;
     private String uid,name,phoneNumber,emailAddress;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        binding = FragmentDeliveryMoreBinding.inflate(inflater,container,false);
-        binding.buttonSignOut.setOnClickListener(this);
-        pref=new SharedPref(getActivity());
+        binding = ActivityFamilyMoreBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        pref=new SharedPref(this);
         firebaseAuth=FirebaseAuth.getInstance();
         db= FirebaseDatabase.getInstance().getReference("User");
         uid=firebaseAuth.getUid().toString();
-        return binding.getRoot();
+        binding.buttonSignOut.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
@@ -49,11 +45,10 @@ public class DeliveryMoreFragment extends Fragment implements View.OnClickListen
         if(id==R.id.button_sign_out){
             FirebaseAuth.getInstance().signOut();
             pref.setLoginState("");
-            startActivity(new Intent(getActivity(), LoginActivity.class));
-            getActivity().finishAffinity();
+            startActivity(new Intent(this, LoginActivity.class));
+            finishAffinity();
         }
     }
-
     @Override
     public void onStart() {
         super.onStart();
@@ -81,7 +76,6 @@ public class DeliveryMoreFragment extends Fragment implements View.OnClickListen
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
 
             }
         });

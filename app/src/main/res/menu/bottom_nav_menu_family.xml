@@ -15,6 +15,7 @@
 
     <item android:id="@+id/familyMessageFragment"
         android:title="@string/more"
+        android:onClick="ShowFamilyMore"
         android:icon="@drawable/ic_more"/>
 
 </menu>
