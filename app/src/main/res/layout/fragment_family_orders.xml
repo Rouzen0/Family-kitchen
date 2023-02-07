@@ -65,7 +65,7 @@
             android:id="@+id/textView_no_item_found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/no_item_found"
+            android:text="@string/no_order_found"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/rv_items"
             app:layout_constraintEnd_toEndOf="@+id/rv_items"

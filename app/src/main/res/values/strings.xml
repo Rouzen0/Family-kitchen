@@ -20,11 +20,18 @@
     <string name="message">Message</string>
     <string name="more">More</string>
     <string name="rate">Rate</string>
+    <string name="send">Send</string>
+    <string name="chat">Chat</string>
+    <string name="chat_with_family">Chat With Family</string>
+    <string name="chat_with_driver">Chat With Driver</string>
     <string name="email_address">Email address</string>
     <string name="location">Location</string>
     <string name="sign_out">Sign out</string>
     <string name="my_shop">My Shop</string>
+    <string name="type_a_message">Type a message</string>
     <string name="accept">Accept</string>
+    <string name="deliver">Deliver</string>
+    <string name="complete">Complete Order</string>
     <string name="reject">Reject</string>
     <string name="order_id">Order ID:</string>
     <string name="total_cost">Total Cost:</string>
@@ -34,9 +41,11 @@
     <string name="item">Item</string>
     <string name="add_new_item">Add new item</string>
     <string name="add_category">Add category</string>
+    <string name="store">Store Info</string>
     <string name="remove">Remove</string>
     <string name="item_name">Item Name</string>
     <string name="item_price">Item Price</string>
+    <string name="closed">Closed</string>
     <string name="add_picture">Add Picture</string>
     <string name="price">Price</string>
     <string name="add_item">Add Item</string>
@@ -50,16 +59,15 @@
     <string name="done">DONE!</string>
     <string name="family_customer_location"><u>Location</u></string>
     <string name="customer_location"><u>Customer Location</u></string>
-    <string name="chat_with_client">Chat with Client</string>
+    <string name="chat_with_client">Chat with Customer</string>
     <string name="store_name">Store name</string>
     <string name="delivery_representor">Delivery representor</string>
     <string name="rate_store_delivery">Rate</string>
     <string name="submit">Submit</string>
     <string name="no_item_found">No Item Found</string>
+    <string name="no_order_found">No Order Found</string>
+    <string name="no_message_found">No Message Found</string>
     <string name="update_item">Update Item</string>
-    <string name="deliver">Deliver</string>
-    <string name="complete">Complete Order</string>
-    <string name="store">Store Info</string>
     <string name="family_store">Family Store</string>
     <string name="view_cart">View Cart</string>
     <string name="cart">Cart</string>
@@ -74,5 +82,4 @@
         <item>Sandwitches</item>
         <item>Sea food</item>
     </string-array>
-
 </resources>

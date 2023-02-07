@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+
+    <ImageView
+        android:id="@+id/imageView_food"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_img" />
+
+    <TextView
+        android:id="@+id/textView_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="-"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total_price"
+        app:layout_constraintStart_toEndOf="@+id/imageView_food"
+        app:layout_constraintTop_toTopOf="@+id/imageView_food" />
+
+    <TextView
+        android:id="@+id/textView_delivery_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Delivery at 2 Jan"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/button_rate_order"
+        app:layout_constraintEnd_toStartOf="@+id/button_rate_order"
+        app:layout_constraintStart_toEndOf="@+id/imageView_food"
+        app:layout_constraintTop_toBottomOf="@+id/textView_user_name" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/button_rate_order"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/green"
+        android:text="@string/chat"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_total_price" />
+
+
+
+    <TextView
+        android:id="@+id/textView_total_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="50 SR"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,6 +32,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -66,7 +70,7 @@
             android:id="@+id/textView_no_item_found"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/no_item_found"
+            android:text="@string/no_order_found"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/rv_items"
             app:layout_constraintEnd_toEndOf="@+id/rv_items"
@@ -76,4 +80,5 @@
             app:layout_constraintVertical_bias="0.429" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

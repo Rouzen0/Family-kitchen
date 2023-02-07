@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/white_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_profile" />
+
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView13"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/imageView13"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:singleLine="true"
+                android:text="Ahemd"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_date"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_username"
+                android:layout_alignStart="@+id/tv_username"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/tv_time"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Hello"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_time"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_username"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_username"
+                android:layout_alignBottom="@+id/tv_username"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="6/14/2018"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_username" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_date"
+                android:layout_alignBottom="@+id/imageView13"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="1:11 AM"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tv_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

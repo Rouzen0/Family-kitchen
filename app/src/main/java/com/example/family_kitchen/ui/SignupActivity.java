@@ -65,7 +65,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextName.setError("Please Enter Name");
             }
             else{
-
                 binding.editTextName.setError(null);
             }
 
@@ -74,7 +73,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextEmail.setError("Please Enter Email");
             }
             else{
-
                 binding.editTextEmail.setError(null);
             }
 
@@ -83,7 +81,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextPassword.setError("Please Enter Password");
             }
             else{
-
                 binding.editTextPassword.setError(null);
             }
 
@@ -92,7 +89,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 binding.editTextPhoneNumber.setError("Please Enter Phone Number");
             }
             else{
-
                 binding.editTextPhoneNumber.setError(null);
             }
 
@@ -103,7 +99,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     a++;
                     binding.editTextMaroofNumber.setError("Please Enter Maroof Number");
                 } else {
-
                     binding.editTextMaroofNumber.setError(null);
                 }
             }
@@ -153,7 +148,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
-        User userRegistration= new User(name,email,password,phoneNumber,maroofNumber,userType,userId,"","","","");
+        User userRegistration= new User(name,email,password,phoneNumber,maroofNumber,userType,userId,"","","","","");
         db.child(userId).setValue(userRegistration);
     }
 }

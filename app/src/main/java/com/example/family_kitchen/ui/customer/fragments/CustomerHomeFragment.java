@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 
 public class CustomerHomeFragment extends Fragment {
@@ -40,8 +44,48 @@ public class CustomerHomeFragment extends Fragment {
         binding = FragmentCustomerHomeBinding.inflate(inflater,container,false);
         userArrayList=new ArrayList<>();
         db = FirebaseDatabase.getInstance().getReference("User");
+
+        binding.editTextSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                filter(s.toString());
+
+            }
+        });
+
         fetchItemsData();
         return binding.getRoot();
+    }
+
+    private void filter(String s){
+        ArrayList<User> searchedArrayList = new ArrayList<>();
+
+        for (User user : userArrayList)
+        {
+            if(user.getName().toLowerCase().contains(s.toLowerCase(Locale.getDefault()))){
+
+                searchedArrayList.add(user);
+
+            }
+        }
+
+
+        customerItemsAdapter = new CustomerItemsAdapter(getActivity(), searchedArrayList);
+        binding.rvItems.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+        binding.rvItems.setAdapter(customerItemsAdapter);
+
     }
 
     private void fetchItemsData() {

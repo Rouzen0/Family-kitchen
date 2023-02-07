@@ -80,7 +80,7 @@ public class FamilyUpdateItemActivity extends AppCompatActivity implements View.
                 a++;
                 binding.editTextItemName.setError("Please Enter Item Name");
             } else {
-                a--;
+
                 binding.editTextItemName.setError(null);
             }
 
@@ -89,7 +89,7 @@ public class FamilyUpdateItemActivity extends AppCompatActivity implements View.
                 a++;
                 binding.editTextItemPrice.setError("Please Enter Item Price");
             } else {
-                a--;
+
                 binding.editTextItemPrice.setError(null);
             }
 

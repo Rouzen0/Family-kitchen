@@ -66,20 +66,32 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
             holder.iv_item.setImageDrawable(context.getResources().getDrawable(R.drawable.image_place_holder_large));
         }
 
+        if(item.getAvailable().equals("false")){
+            holder.tv_item_store_status.setVisibility(View.VISIBLE);
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                item =list.get(position);
-                Intent intent=new Intent(context, CustomerStoreViewActivity.class);
-                intent.putExtra("user_id",item.getUserId());
-                context.startActivity(intent);
+                item = list.get(position);
+                if(item.getAvailable().equals("true")) {
+                    Intent intent = new Intent(context, CustomerStoreViewActivity.class);
+                    intent.putExtra("user_id", item.getUserId());
+                    context.startActivity(intent);
+                } else{
+                    Toast.makeText(context, "Store is closed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
+
         db_rating = FirebaseDatabase.getInstance().getReference("Rating");
 
         db_rating.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //clearing the previous User list
+
                 //getting all nodes
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     item =list.get(position);
@@ -118,6 +130,7 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
         public TextView tv_item_name;
         public TextView tv_item_price;
         public TextView tv_item_rating;
+        public TextView tv_item_store_status;
         public ImageView iv_item;
 
         public ViewHolder(@NonNull View v) {
@@ -126,6 +139,7 @@ public class CustomerItemsAdapter extends RecyclerView.Adapter<CustomerItemsAdap
             tv_item_name = (TextView) v.findViewById(R.id.textView_item_name);
             tv_item_rating = (TextView) v.findViewById(R.id.textView_rating);
             tv_item_price = (TextView) v.findViewById(R.id.textView_item_price);
+            tv_item_store_status = (TextView) v.findViewById(R.id.textView_item_store_status);
             iv_item = (ImageView) v.findViewById(R.id.imageView_item);
         }
     }

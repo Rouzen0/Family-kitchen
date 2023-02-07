@@ -122,7 +122,7 @@ public class FamilyAddItemActivity extends AppCompatActivity implements View.OnC
                     Item item = new Item(itemName,itemPrice,"",storeName,userId,sid);
                     db.child(sid).setValue(item);
                     Toast.makeText(this, "Item Added", Toast.LENGTH_SHORT).show();
-
+                    finish();
                 }
             }
 

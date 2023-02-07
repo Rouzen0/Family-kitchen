@@ -52,8 +52,10 @@ public class CustomerRateOrderActivity extends AppCompatActivity implements View
                     ratingDelivery=dataSnapshot.child(orderId).child("deliveryRating").getValue(String.class);
                     ratingStore=dataSnapshot.child(orderId).child("storeRating").getValue(String.class);
 
-                    binding.ratingBarDelivery.setRating(Float.parseFloat(ratingDelivery));
-                    binding.ratingBarStore.setRating(Float.parseFloat(ratingStore));
+                    if(ratingDelivery!=null){
+                        binding.ratingBarDelivery.setRating(Float.parseFloat(ratingDelivery));
+                        binding.ratingBarStore.setRating(Float.parseFloat(ratingStore));
+                    }
 
 
 
